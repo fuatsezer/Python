@@ -129,6 +129,96 @@ print_all(name="dumbledore",job="headmaster")
 >> name: dumbledore
 ```
 
+### Lambda Function
+```python
+raise_to_power = lambda x,y: x ** y
+raise_to_power(2,3)
+>> 8
+```
+### Ananymous functions
+* Function map takes two arguments: `map(func, seq)`
+* `map()` applies the function to ALL elements in the sqquence
+```python
+nums = [48,6,9,21,1]
+square_all = map(lambda num: num ** 2, nums)
+
+print(list(square_all))
+>> [2304, 36, 81, 441, 1]
+```
+
+### Errors and exceptions
+```python
+def sqrt(x):
+  """Returns the square root of a number."""
+  try:
+    return x ** 0.5
+  except:
+  print("x must be an int or float")
+
+sqrt(4)
+>> 2.0
+
+sqrt("hi")
+>> x must be an int or float
+```
+
+```python 
+def sqrt(x):
+  """Returns the square root of a number."""
+  if x < 0:
+    raise ValueError("x must be non-negative")
+  try:
+    return x ** 0.5
+  except TypeError:
+    print("x must be an int or float")
+sqrt(-2)
+>> ValueError: x must be non-negative
+```
+
+### Iterating over iterables: next()
+```python
+word = "Da"
+it = iter(word)
+next(it)
+>> "D"
+next(it)
+>> "a"
+next(it)
+>> StopIteration
+```
+
+```python
+word = "Data"
+it = iter(word)
+print(*it)
+>> D a t a
+```
+```python
+file = open("file.txt")
+it = iter(file)
+print(next(it))
+>> This is the first line
+print(next(it))
+>> This is the second line.
+```
+
+### Using enumarate()
+```python
+avengers = ["hawkeye","iron man", "thor","quicksilver"]
+e = enumarate(avengers)
+list(e)
+>> [(0,"hawkeye"), (1,"iron man"), (2,"thor"), (3,"quicksilver")]
+for index,value in enumarate(avengers,start=10):
+  print(index,value)
+>> 10 hawkeye
+>> 11 iron man
+>> 12 thor
+>> 13 quicksilver
+```
+
+
+
+
 
 
 
