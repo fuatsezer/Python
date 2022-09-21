@@ -216,6 +216,19 @@ for index,value in enumarate(avengers,start=10):
 >> 13 quicksilver
 ```
 
+### zip() and unpack
+```python
+avengers = ["hawkeye","iron man", "thor","quicksilver"]
+names = ["barton", "stark", "odison", "maxinoff"]
+
+for z1,z2 in zip(avengers,names):
+  print(z1,z2)
+
+>> hawkeye barton
+>> iron man stark
+>> thor odison
+>> quicksilver maxinoff
+```
 
 
 
