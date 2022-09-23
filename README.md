@@ -230,8 +230,24 @@ for z1,z2 in zip(avengers,names):
 >> quicksilver maxinoff
 ```
 
-
-
+## List Comphrension
+```python
+nums = [12,8,21,3,16]
+new_nums = [num + 1 for num in nums]
+print(new_nums)
+>> [13, 9, 22, 4, 17]
+```
+## Nested loops
+```python
+pairs_2 = [(num1, num2) for num1 in range(0,2) for num2 in range(6,8)]
+print(pairs_2)
+>> [(0, 6), (0,7), (1, 6), (1,7)]
+```
+## Conditional Comphrension
+```python
+[num ** 2 for num in range(10) if num%2 == 0]
+>> [0, 4, 16, 36, 64]
+```
 
 
 
