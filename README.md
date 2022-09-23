@@ -249,6 +249,17 @@ print(pairs_2)
 >> [0, 4, 16, 36, 64]
 ```
 
+```python
+[num ** 2 if num%2 == 0 else 0 for num in range(10)]
+>> [0, 0, 4, 0, 16, 0, 36, 0, 64, 0]
+```
+
+## Dict comphrension
+```python
+pos_neg = {num: -num for num in range(3)}
+>> {0:0, 1:-1, 2:-2}
+```
+
 
 
 
